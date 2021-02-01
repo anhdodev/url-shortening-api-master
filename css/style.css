@@ -266,7 +266,7 @@ header .header-mobile.open {
 }
 
 .hero .hero-image {
-  background: url(/images/illustration-working.svg);
+  background: url("../images/illustration-working.svg");
   background-repeat: no-repeat;
   height: 400px;
   -webkit-box-flex: 3;
@@ -315,7 +315,7 @@ header .header-mobile.open {
           align-items: center;
   padding: 2.5rem 2rem;
   border-radius: 10px;
-  background: url(./images/bg-shorten-desktop.svg);
+  background: url("../images/bg-shorten-desktop.svg");
   background-repeat: no-repeat;
   background-position: 40% 10%;
   background-color: #3b3054;
@@ -330,7 +330,7 @@ header .header-mobile.open {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 2rem 1rem;
-    background: url(./images/bg-shorten-mobile.svg);
+    background: url("../images/bg-shorten-mobile.svg");
     background-repeat: no-repeat;
     background-color: #3b3054;
     background-position: 100% 0%;
@@ -603,14 +603,14 @@ header .header-mobile.open {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 200px;
-  background: url("./images/bg-boost-desktop.svg");
+  background: url("../images/bg-boost-desktop.svg");
   background-repeat: no-repeat;
   background-color: #3b3054;
 }
 
 @media (max-width: 480px) {
   .shorten-boost {
-    background: url("./images/bg-boost-mobile.svg");
+    background: url("../images/bg-boost-mobile.svg");
     background-repeat: no-repeat;
     background-color: #3b3054;
   }

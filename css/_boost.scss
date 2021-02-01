@@ -4,12 +4,12 @@
     align-items: center;
     flex-direction: column;
     height: 200px;
-    background: url('./images/bg-boost-desktop.svg');
+    background: url('../images/bg-boost-desktop.svg');
     background-repeat: no-repeat;
     background-color: $dark-violet;
 
     @include breakpoint-down("mobile") {
-        background: url('./images/bg-boost-mobile.svg');
+        background: url('../images/bg-boost-mobile.svg');
         background-repeat: no-repeat;
         background-color: $dark-violet;
     }
