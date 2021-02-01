@@ -1,0 +1,53 @@
+.footer {
+    background-color: $very-dark-violet;
+    color: white;
+    height: 100%;
+
+    .footer-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 3.5rem 10rem;
+
+        @include breakpoint-down("mobile") {
+            padding: 2rem 2rem;
+            flex-direction: column;
+            text-align: center;
+
+            &>div {
+                margin-bottom: 2rem;
+            }
+        }
+
+        .footer-logo {
+            flex: 3;
+            #site-logo {
+                width: 121px;
+                height: 33px;
+            }
+        }
+
+        .footer-nav {
+            flex: 1;
+            h5 {
+                margin-bottom: 1rem;
+            }
+            ul {
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    color: $gray-violet;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .social-media {
+            flex: 2;
+            padding: 0 2rem;
+            #social-media-icon {
+                margin-right: .75rem;
+            }
+        }
+    }
+}

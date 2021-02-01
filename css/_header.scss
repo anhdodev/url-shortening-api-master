@@ -1,0 +1,138 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 10rem;
+
+    @include breakpoint-down("mobile") {
+        padding: 1.25rem 2rem;
+    }
+
+    nav {
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+        flex-basis: 40%;
+
+        @include breakpoint-down("mobile") {
+            flex-basis: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: $gray-violet;
+            font-size: 14px;
+
+            &:hover {
+                color: $dark-violet;
+            }
+        }
+
+        #btn-hamburger {
+
+            span {
+                width: 25px;
+                background-color: black;
+                height: 2px;
+                display: block;
+                position: relative;
+                transition: all .5s;
+                transform: rotate(0);
+                opacity: 1;
+
+                &:not(:last-child) {
+                    margin-bottom: .25rem;
+                }
+
+
+            }
+
+            &.open {
+                #top-bar {
+                    transform: rotate(45deg);
+                    transform-origin: 10% 10%;
+                }
+
+                #middle-bar {
+                    opacity: 0;
+                    transform: translateX(-3px);
+                }
+
+                #bottom-bar {
+                    transform: rotate(-45deg);
+                    transform-origin: 10% 100%;
+                }
+            }
+
+        }
+    }
+
+    .cta-actions {
+        #login-btn {
+            text-decoration: none;
+            color: $gray-violet;
+            font-size: 14px;
+
+            &:hover {
+                color: $dark-violet;
+            }
+        }
+
+        #signup-btn {
+            border: none;
+            border-radius: 25px;
+            background-color: $cyan;
+            color: white;
+            padding: 0.5rem 1.25rem;
+            margin-left: 2rem;
+
+            &:hover {
+                cursor: pointer;
+                opacity: .75;
+            }
+        }
+    }
+
+    .header-mobile {
+        position: absolute;
+        z-index: 1;
+        top: 10%;
+        left: -50%;
+        transform: translate(-50%, 0);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 15rem;
+        width: calc(100% - 4rem);
+        background: hsl(257, 27%, 26%);
+        padding: 2rem 0;
+        border-radius: 20px;
+        transition: all .5s ease-in-out;
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+        }
+
+        hr {
+            width: 80%;
+            border: .5px solid $gray;
+        }
+
+        #signup-btn {
+            border: none;
+            border-radius: 25px;
+            background-color: $cyan;
+            color: white;
+            padding: 0.5rem 1.25rem;
+            width: 80%;
+        }
+
+        &.open {
+            left: 50%;
+        }
+    }
+}

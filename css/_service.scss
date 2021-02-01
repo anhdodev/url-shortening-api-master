@@ -1,0 +1,157 @@
+.service-section {
+    background-color: $light-pink;
+
+    .result-container {
+        padding: 1rem 2rem;
+        background-color: white;
+        border-radius: 10px;
+        transform: translateY(66px);
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        #output-url {
+            color: $cyan;
+        }
+
+        #copy-btn {
+            border: none;
+            border-radius: 10px;
+            background-color: $cyan;
+            color: white;
+            padding: 0.5rem 1.25rem;
+            margin-left: .75rem;
+
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:focus {
+                background-color: $dark-violet;
+                outline: none;
+            }
+        }
+    }
+
+    .service-container {
+        padding: 0 10rem 10rem;
+        position: relative;
+
+        @include breakpoint-down("mobile") {
+            padding: 0 0 10rem;
+        }
+
+        #service-text {
+            padding: 8rem 0 5rem;
+            text-align: center;
+
+            @include breakpoint-down("mobile") {
+                padding: 8rem 2rem
+            }
+
+            h1 {
+                color: $dark-violet;
+            }
+
+            p {
+                color: $gray-violet;
+                margin-top: 1rem;
+                font-size: 14px;
+            }
+        }
+
+        .background-line {
+            width: 70%;
+            height: 8px;
+            background-color: #2acfcf;
+            position: absolute;
+            top: 56%;
+            left: 15%;
+
+            @include breakpoint-down("mobile") {
+                width: 150%;
+                height: 8px;
+                background-color: #2acfcf;
+                position: absolute;
+                top: 60%;
+                left: -24%;
+                transform: rotate(90deg);
+            }
+
+        }
+
+        #service-card {
+            display: flex;
+            justify-content: space-between;
+            height: 300px;
+            position: relative;
+
+            @include breakpoint-down("mobile") {
+                flex-direction: column;
+                align-items: center;
+                height: 900px;
+            }
+
+            .card {
+                width: 300px;
+                height: 230px;
+                background-color: white;
+                padding: 3.5rem 1rem 2.5rem;
+                border-radius: 5px;
+                position: relative;
+
+                &:nth-of-type(1) {
+                    align-self: flex-start;
+
+                    @include breakpoint-down("mobile") {
+                        align-self: unset;
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    align-self: center;
+
+                    @include breakpoint-down("mobile") {
+                        align-self: unset;
+                    }
+                }
+
+                &:nth-of-type(3) {
+                    align-self: flex-end;
+
+                    @include breakpoint-down("mobile") {
+                        align-self: unset;
+                    }
+                }
+
+
+
+
+                h4 {
+                    color: $dark-violet;
+                }
+
+                p {
+                    color: $gray-violet;
+                    margin-top: 1rem;
+                    font-size: 14px;
+                }
+
+                #card-icon {
+                    position: absolute;
+                    background-color: $dark-violet;
+                    padding: .75rem;
+                    max-width: 66px;
+                    top: 0;
+                    left: 10%;
+                    transform: translateY(-33px);
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+
+}

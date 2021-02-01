@@ -1,0 +1,87 @@
+.input-container {
+    padding: 0 10rem;
+
+    @include breakpoint-down("mobile") {
+        padding: 0 2rem;
+    }
+
+    .shorten-input-area {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        padding: 2.5rem 2rem;
+        border-radius: 10px;
+        background: url(./images/bg-shorten-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: 40% 10%;
+        background-color: $dark-violet;
+        transform: translateY(66px);
+
+        @include breakpoint-down("mobile") {
+            flex-direction: column;
+            padding: 2rem 1rem;
+            background: url(./images/bg-shorten-mobile.svg);
+            background-repeat: no-repeat;
+            background-color: $dark-violet;
+            background-position: 100% 0%;
+            transform: translateY(92px);
+        }
+
+        input {
+            flex-basis: 85%;
+            width: 100%;
+            border: none;
+            padding: .75rem;
+            border-radius: 10px;
+
+            &:focus {
+                outline: none;
+            }
+
+
+
+            @include breakpoint-down("mobile") {
+                margin-bottom: 2rem;
+            }
+        }
+
+        #error-message {
+            display: none;
+            color: $red;
+            font-size: 12px;
+            position: absolute;
+            bottom: 15%;
+        }
+        
+
+        button {
+            flex-basis: 12%;
+            border: none;
+            background-color: $cyan;
+            color: white;
+            padding: .75rem 1rem;
+            border-radius: 10px;
+            width: 100%;
+
+            &:hover {
+                opacity: .7;
+                cursor: pointer;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &.input-error {
+            input {
+                border: 2px solid $red;
+            }
+
+            #error-message {
+                display: block;
+            }
+        }
+    }
+}

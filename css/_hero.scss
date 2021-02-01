@@ -1,0 +1,71 @@
+.hero {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    align-items: center;
+
+    @include breakpoint-down("mobile") {
+        padding: 2rem 2rem 4rem;
+        flex-direction: column-reverse;
+    }
+
+    .hero-text {
+        flex: 2;
+
+        @include breakpoint-down("mobile") {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            line-height: 3.5rem;
+            color: $dark-blue;
+
+            @include breakpoint-down("mobile") {
+                font-size: 2rem;
+                line-height: 2rem;
+                margin-bottom: 1rem;
+            }
+        }
+        p {
+            color: $gray-violet;
+        }
+
+        #hero-cta {
+            border: none;
+            border-radius: 25px;
+            background-color: $cyan;
+            color: white;
+            padding: 0.5rem 1.25rem;
+            width: 8rem;
+            margin-top: 2rem;
+
+            &:focus {
+                outline: none;;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .hero-image {
+        background: url(/images/illustration-working.svg);
+        background-repeat: no-repeat;
+        height: 400px;
+        flex: 3;
+        background-size: contain;
+        transform: translate(40%, 0%);
+
+        @include breakpoint-down("mobile") {
+            flex-basis: 270px;
+            width: 100%;
+            transform: translateX(12%);
+            background-size: cover;
+            margin-bottom: 2rem;
+        }
+    }
+}

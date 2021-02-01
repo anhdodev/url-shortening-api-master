@@ -1,0 +1,14 @@
+$screen-sizes: ("desktop" : "1440px", "tablet" : "768px", "mobile" : "480px");
+
+@mixin breakpoint-down($size) {
+    @media (max-width: map-get($screen-sizes, $size)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-up($size) {
+    @media (min-width: map-get($screen-sizes, $size)) {
+        @content;
+    }
+}
+

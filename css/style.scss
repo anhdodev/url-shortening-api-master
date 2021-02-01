@@ -1,0 +1,14 @@
+@import 'variables';
+@import 'mixins';
+@import 'globals';
+@import 'header';
+@import 'hero';
+@import 'shorten';
+@import 'service';
+@import 'boost';
+@import 'footer';
+
+body {
+    font-family: $font-family;
+    overflow-x: hidden;
+}
